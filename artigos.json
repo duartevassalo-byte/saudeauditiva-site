@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "tempo-medio-diagnostico-perda-auditiva",
+    "titulo": "Sete anos: o tempo médio entre os primeiros sinais e o diagnóstico",
+    "categoria": "perda-auditiva",
+    "resumo": "Dados internacionais confirmam que a maioria das pessoas adia o diagnóstico por cerca de sete anos. Percebemos porquê — e o que isso custa à saúde a longo prazo.",
+    "data": "2026-04-15",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "tipos-perda-auditiva",
+    "titulo": "Perda neurossensorial, condutiva ou mista — qual é a diferença?",
+    "categoria": "perda-auditiva",
+    "resumo": "Nem toda a perda auditiva é igual. Explicamos os três grandes tipos, as causas mais frequentes e porque é que a distinção importa para o tratamento.",
+    "data": "2026-04-10",
+    "tempo_leitura": "5 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "presbiacusia-envelhecimento",
+    "titulo": "Presbiacusia: a perda auditiva associada à idade",
+    "categoria": "perda-auditiva",
+    "resumo": "A partir dos 60 anos, grande parte das pessoas desenvolve algum grau de perda auditiva. O que é, como se manifesta e o que se pode fazer.",
+    "data": "2026-04-02",
+    "tempo_leitura": "7 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "volume-televisao-sinal",
+    "titulo": "Quando o volume da televisão se torna um sinal clínico",
+    "categoria": "sinais-alerta",
+    "resumo": "O aumento gradual do volume da televisão é frequentemente o primeiro sinal de perda auditiva — e normalmente quem nota primeiro é a família.",
+    "data": "2026-04-12",
+    "tempo_leitura": "4 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "zumbido-acufenos",
+    "titulo": "Zumbidos e acufenos: quando se deve preocupar",
+    "categoria": "sinais-alerta",
+    "resumo": "Quase toda a gente já teve um zumbido passageiro. Mas quando se torna persistente, é um sinal que merece avaliação — explicamos porquê.",
+    "data": "2026-04-05",
+    "tempo_leitura": "5 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "dificuldade-ruido-fundo",
+    "titulo": "Dificuldade em ouvir em locais com ruído: o sinal mais ignorado",
+    "categoria": "sinais-alerta",
+    "resumo": "Restaurantes, cafés, festas familiares. Se há um sinal que aparece cedo na perda auditiva, é este — e é o que mais se subestima.",
+    "data": "2026-03-28",
+    "tempo_leitura": "4 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "ruido-no-trabalho",
+    "titulo": "Exposição a ruído no trabalho: o que diz a lei e o que pode fazer",
+    "categoria": "prevencao",
+    "resumo": "Construção civil, indústria, hotelaria, aeroportos. Sectores com níveis de ruído que lesam a audição — e obrigações legais dos empregadores.",
+    "data": "2026-04-14",
+    "tempo_leitura": "8 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "auscultadores-regra-60-60",
+    "titulo": "A regra dos 60/60 para auscultadores (e porque é importante)",
+    "categoria": "prevencao",
+    "resumo": "60% do volume máximo, no máximo 60 minutos seguidos. Uma regra simples, recomendada pela OMS, para quem usa auscultadores todos os dias.",
+    "data": "2026-04-08",
+    "tempo_leitura": "3 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "check-up-auditivo-periodico",
+    "titulo": "Check-up auditivo: com que frequência o deve fazer?",
+    "categoria": "prevencao",
+    "resumo": "Não há um calendário único — depende da idade, da profissão e de factores de risco. Eis as recomendações das principais sociedades científicas.",
+    "data": "2026-03-30",
+    "tempo_leitura": "5 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "falar-com-familiar-audicao",
+    "titulo": "Como abordar um familiar sobre a perda auditiva sem conflitos",
+    "categoria": "familia",
+    "resumo": "A negação é uma das reacções mais comuns. Propomos uma abordagem gradual, baseada em investigação comportamental, para conversas difíceis.",
+    "data": "2026-04-16",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "impacto-isolamento-social",
+    "titulo": "O impacto silencioso da perda auditiva no isolamento social",
+    "categoria": "familia",
+    "resumo": "Estudos longitudinais mostram uma ligação clara entre perda auditiva não tratada e retracção social — sobretudo depois dos 65 anos.",
+    "data": "2026-04-01",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "netos-avos-comunicacao",
+    "titulo": "Netos e avós: estratégias simples para melhorar a comunicação",
+    "categoria": "familia",
+    "resumo": "Falar de frente, escolher espaços mais silenciosos, gerir a paciência. Pequenas mudanças com grande impacto nas relações familiares.",
+    "data": "2026-03-25",
+    "tempo_leitura": "4 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "quanto-custa-aparelho-auditivo",
+    "titulo": "Quanto custa um aparelho auditivo em Portugal em 2026",
+    "categoria": "aparelhos",
+    "resumo": "Gamas, comparticipações, planos de pagamento e diferenças reais entre marcas. Um guia prático para quem está a pensar adquirir aparelhos.",
+    "data": "2026-04-18",
+    "tempo_leitura": "9 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "aparelho-auditivo-adaptacao",
+    "titulo": "Adaptação aos aparelhos auditivos: o que esperar nas primeiras semanas",
+    "categoria": "aparelhos",
+    "resumo": "O cérebro precisa de tempo para reaprender a ouvir. Eis o que a evidência clínica mostra sobre o processo de adaptação aos primeiros aparelhos.",
+    "data": "2026-04-06",
+    "tempo_leitura": "7 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "aparelhos-invisiveis-vs-bte",
+    "titulo": "Aparelhos invisíveis vs. retroauriculares: o que escolher?",
+    "categoria": "aparelhos",
+    "resumo": "Discrição, desempenho, autonomia, preço. Comparação entre os dois formatos mais procurados, com as indicações clínicas habituais.",
+    "data": "2026-03-29",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva"
+  }
+]

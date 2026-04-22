@@ -1,0 +1,24 @@
+# NOTA: como o sistema usa o próprio repositório para manter estado
+# (history.json, pending_social.json, social_history.json), a maioria
+# dos ficheiros gerados É para ser committed pelo bot. O .gitignore
+# é mínimo de propósito.
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Ambientes virtuais Python (caso alguém corra local)
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Ferramentas de editor
+.vscode/
+.idea/
+
+# Ficheiros temporários
+*.tmp
+*.bak

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — Saúde Auditiva</title>
+  <meta name="description" content="Contacte a equipa do Saúde Auditiva. Questões editoriais, sugestões de artigos, privacidade e dados pessoais.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contacto">
+
+  <div id="slot-topbar"></div>
+  <div id="slot-header"></div>
+
+  <main>
+    <section class="cat-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Início</a> · <span>Contacto</span>
+        </div>
+        <span class="kicker">Contacto</span>
+        <h1>Fale connosco</h1>
+        <p class="lead">Questões sobre saúde auditiva, sugestões de temas para artigos, ou assuntos editoriais. Respondemos a todas as mensagens em 1 a 3 dias úteis.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="dual-grid">
+          <div>
+            <h2 style="font-family:var(--serif); font-size:1.6rem; margin-bottom:1.5rem;">Canais de contacto</h2>
+
+            <div style="border-bottom:1px solid var(--rule); padding:1.4rem 0;">
+              <h4 style="font-family:var(--sans); font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:.4rem;">Email geral</h4>
+              <p style="margin:0; font-family:var(--serif); font-size:1.05rem;"><a href="mailto:geral@saudeauditiva.pt">geral@saudeauditiva.pt</a></p>
+              <p style="margin:.3rem 0 0; font-size:.88rem; color:var(--ink-mute);">Dúvidas gerais sobre o portal e os nossos serviços.</p>
+            </div>
+
+            <div style="border-bottom:1px solid var(--rule); padding:1.4rem 0;">
+              <h4 style="font-family:var(--sans); font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:.4rem;">Privacidade e RGPD</h4>
+              <p style="margin:0; font-family:var(--serif); font-size:1.05rem;"><a href="mailto:privacidade@saudeauditiva.pt">privacidade@saudeauditiva.pt</a></p>
+              <p style="margin:.3rem 0 0; font-size:.88rem; color:var(--ink-mute);">Para exercer direitos RGPD ou questões sobre protecção de dados.</p>
+            </div>
+
+            <div style="border-bottom:1px solid var(--rule); padding:1.4rem 0;">
+              <h4 style="font-family:var(--sans); font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:.4rem;">Conteúdo editorial</h4>
+              <p style="margin:0; font-family:var(--serif); font-size:1.05rem;"><a href="mailto:editorial@saudeauditiva.pt">editorial@saudeauditiva.pt</a></p>
+              <p style="margin:.3rem 0 0; font-size:.88rem; color:var(--ink-mute);">Sugestões de artigos, correcções ou propostas de colaboração.</p>
+            </div>
+
+            <div style="padding:1.4rem 0;">
+              <h4 style="font-family:var(--sans); font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:.4rem;">Para marcar consulta</h4>
+              <p style="margin:0; font-family:var(--serif); font-size:1.05rem;"><a href="#" data-open-booking>Usar o formulário de marcação</a></p>
+              <p style="margin:.3rem 0 0; font-size:.88rem; color:var(--ink-mute);">Gratuito e sem compromisso. Disponível em qualquer página.</p>
+            </div>
+          </div>
+
+          <div class="consulta-box">
+            <h3>Enviar mensagem</h3>
+            <p class="subtitle">Escreva-nos e respondemos rapidamente.</p>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="ct-nome">Nome</label>
+                <input type="text" id="ct-nome" name="nome" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="ct-email">Email</label>
+                <input type="email" id="ct-email" name="email" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="ct-assunto">Assunto</label>
+                <select id="ct-assunto" name="assunto" required>
+                  <option value="">Selecione o assunto...</option>
+                  <option>Questão sobre saúde auditiva</option>
+                  <option>Informação sobre a consulta gratuita</option>
+                  <option>Sugestão de artigo</option>
+                  <option>Questão editorial</option>
+                  <option>Privacidade e dados pessoais</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="ct-msg">Mensagem</label>
+                <textarea id="ct-msg" name="mensagem" required minlength="10"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block btn-lg">Enviar mensagem →</button>
+            </form>
+            <div class="form-success" id="contact-success">
+              <strong>✓ Mensagem enviada!</strong>
+              <p>Respondemos em 1 a 3 dias úteis. Obrigado pelo contacto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="slot-footer"></div>
+  <div id="slot-modal"></div>
+
+  <script src="partials.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
