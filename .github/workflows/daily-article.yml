@@ -1,0 +1,81 @@
+name: Geração diária de artigo
+
+on:
+  schedule:
+    # Todos os dias às 09:30 Lisboa (08:30 UTC no inverno, 08:30 UTC = 09:30 WET)
+    # Nota: cron corre em UTC. Em horário de verão (WEST, UTC+1), isto publica às 10:30 local.
+    # Se quiseres garantir sempre 09:30 local, ver DST note no README.
+    - cron: "30 8 * * *"
+  workflow_dispatch:
+    inputs:
+      topic_id:
+        description: "ID de tópico específico (opcional, ex: pa-001)"
+        required: false
+        type: string
+      dry_run:
+        description: "Modo simulação (não escreve ficheiros)"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write  # necessário para commit dos artigos
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Gerar artigo
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.topic_id }}" ]; then ARGS="--topic-id ${{ inputs.topic_id }}"; fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          python3 scripts/generate_article.py $ARGS
+
+      - name: Publicar em redes sociais
+        if: ${{ inputs.dry_run != true }}
+        env:
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+        run: python3 scripts/publish_social.py
+
+      - name: Commit das alterações
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          git config user.name "saude-auditiva-bot"
+          git config user.email "bot@saudeauditiva.pt"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Sem alterações para fazer commit."
+          else
+            DATE=$(date +%Y-%m-%d)
+            git commit -m "Artigo automático · $DATE" -m "Gerado por GitHub Actions."
+            git push
+          fi
+
+      - name: Upload de logs como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-${{ github.run_id }}
+          path: logs/
+          retention-days: 14

@@ -1,0 +1,50 @@
+name: Retry publicação social
+
+on:
+  schedule:
+    # 3 retries durante o dia caso a publicação diária tenha falhado: 12:00, 16:00, 20:00 UTC
+    - cron: "0 12,16,20 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+
+      - name: Verificar se há fila pendente
+        id: check
+        run: |
+          if [ -f data/pending_social.json ] && [ "$(cat data/pending_social.json)" != "[]" ]; then
+            echo "has_pending=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_pending=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Tentar publicar
+        if: steps.check.outputs.has_pending == 'true'
+        env:
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+        run: python3 scripts/publish_social.py
+
+      - name: Commit (se algo mudou)
+        if: steps.check.outputs.has_pending == 'true'
+        run: |
+          git config user.name "saude-auditiva-bot"
+          git config user.email "bot@saudeauditiva.pt"
+          git add -A
+          git diff --cached --quiet || {
+            git commit -m "Retry publicação social · $(date +%Y-%m-%d)"
+            git push
+          }
