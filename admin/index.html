@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin · Saúde Auditiva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { background: var(--paper-dim); }
+    .admin-wrap { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+    .admin-head {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); margin-bottom: 2rem;
+    }
+    .admin-head h1 { margin: 0; font-size: 1.8rem; }
+    .admin-head h1 .tag {
+      display: inline-block; background: var(--accent); color: #fff;
+      font-family: var(--sans); font-size: .65rem; letter-spacing: .15em;
+      text-transform: uppercase; padding: .3rem .7rem; border-radius: 2px;
+      vertical-align: middle; margin-left: .6rem;
+    }
+    .logout-btn { background: none; border: 1px solid var(--rule); padding: .5rem 1rem; cursor: pointer; font-family: var(--sans); font-size: .85rem; border-radius: 3px; }
+    .logout-btn:hover { border-color: var(--ink); }
+
+    .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .stat-card { background: var(--paper); border: 1px solid var(--rule); padding: 1.3rem; border-radius: 3px; }
+    .stat-card .label { font-family: var(--sans); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: .5rem; }
+    .stat-card .value { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1; }
+    .stat-card .value.warn { color: var(--warn); }
+    .stat-card .value.ok { color: var(--accent); }
+    .stat-card .sub { font-size: .8rem; color: var(--ink-mute); margin-top: .4rem; }
+
+    .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    @media (max-width: 900px) { .panels { grid-template-columns: 1fr; } }
+    .panel { background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; }
+    .panel h2 {
+      margin: 0; padding: 1rem 1.3rem; font-family: var(--sans); font-size: .85rem;
+      font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      background: var(--ink); color: var(--paper);
+    }
+    .panel-body { padding: 0; max-height: 500px; overflow-y: auto; }
+    .row { padding: .9rem 1.3rem; border-bottom: 1px solid var(--rule-soft); display: flex; justify-content: space-between; gap: 1rem; align-items: flex-start; }
+    .row:last-child { border-bottom: 0; }
+    .row .main { flex: 1; min-width: 0; }
+    .row .title { font-family: var(--serif); font-size: 1rem; margin: 0 0 .2rem; }
+    .row .meta { font-family: var(--sans); font-size: .75rem; color: var(--ink-mute); letter-spacing: .03em; }
+    .row .actions { display: flex; gap: .4rem; }
+    .mini-btn { font-family: var(--sans); font-size: .75rem; padding: .3rem .7rem; background: var(--paper-dim); border: 0; border-radius: 2px; cursor: pointer; color: var(--ink); text-decoration: none; }
+    .mini-btn:hover { background: var(--paper-dark); }
+    .mini-btn.primary { background: var(--accent); color: #fff; }
+    .mini-btn.primary:hover { background: var(--accent-dark); color: #fff; }
+
+    .status-pill {
+      display: inline-block; font-family: var(--sans); font-size: .68rem; font-weight: 600;
+      padding: .15rem .5rem; border-radius: 2px; letter-spacing: .05em; text-transform: uppercase;
+    }
+    .status-pill.ok { background: var(--accent-soft); color: var(--accent); }
+    .status-pill.warn { background: #fdf3e7; color: var(--warn); }
+    .status-pill.err { background: #fbe9e7; color: #c62828; }
+
+    .empty { padding: 2rem 1.3rem; text-align: center; color: var(--ink-mute); font-family: var(--serif); font-style: italic; }
+
+    .actions-row { display: flex; gap: .8rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .actions-row .btn { font-size: .88rem; }
+
+    /* Login */
+    .login-gate { max-width: 400px; margin: 5rem auto; padding: 2.5rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; }
+    .login-gate h1 { font-size: 1.4rem; margin-bottom: .5rem; text-align: center; }
+    .login-gate p { text-align: center; color: var(--ink-mute); font-size: .9rem; margin-bottom: 1.5rem; }
+    .login-gate .err { color: #c62828; font-size: .85rem; margin-top: .6rem; text-align: center; display: none; }
+    .login-gate .err.show { display: block; }
+
+    pre.json {
+      background: var(--ink); color: #a8d4be; font-size: .78rem; line-height: 1.5;
+      padding: 1rem; overflow: auto; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login gate -->
+  <div id="gate" class="login-gate" style="display:none">
+    <h1>Admin · Saúde Auditiva</h1>
+    <p>Área restrita</p>
+    <form id="login-form">
+      <div class="form-group">
+        <label for="pw">Palavra-passe</label>
+        <input type="password" id="pw" autofocus>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+      <div class="err" id="login-err">Palavra-passe incorrecta.</div>
+    </form>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dash" class="admin-wrap" style="display:none">
+    <div class="admin-head">
+      <h1>Saúde Auditiva <span class="tag">Admin</span></h1>
+      <button class="logout-btn" id="logout">Sair</button>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="label">Artigos totais</div>
+        <div class="value ok" id="st-total">—</div>
+        <div class="sub" id="st-total-sub">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Publicados este mês</div>
+        <div class="value" id="st-month">—</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Fila social pendente</div>
+        <div class="value" id="st-social">—</div>
+        <div class="sub">posts ainda não publicados</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Em revisão manual</div>
+        <div class="value" id="st-pending">—</div>
+        <div class="sub">não aprovados pelo verificador</div>
+      </div>
+    </div>
+
+    <div class="actions-row">
+      <a class="btn btn-primary" href="https://github.com/duartevassalo-byte/Saude-Auditiva/actions" target="_blank">Disparar workflow manual →</a>
+      <a class="btn btn-outline" href="../index.html">Ver site público</a>
+      <a class="btn btn-ghost" href="#" id="refresh">↻ Actualizar</a>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <h2>Últimos artigos publicados</h2>
+        <div class="panel-body" id="panel-artigos"></div>
+      </div>
+      <div class="panel">
+        <h2>Posts de redes sociais</h2>
+        <div class="panel-body" id="panel-social"></div>
+      </div>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <h2>Artigos em revisão manual</h2>
+        <div class="panel-body" id="panel-pending"></div>
+      </div>
+      <div class="panel">
+        <h2>Cobertura por categoria</h2>
+        <div class="panel-body" id="panel-cats"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+  /* ────────── Autenticação ──────────
+     ATENÇÃO: esta é uma proteção *client-side*. O ficheiro é público
+     porque está em GitHub Pages. A hash impede que alguém olhe o HTML
+     e veja a password — mas alguém tecnicamente motivado pode aceder
+     aos mesmos dados (artigos.json, etc.) diretamente. O painel só
+     mostra dados que já estão no repositório público. NÃO ponhas aqui
+     nada que não possa ser visto.
+
+     Para mudar a password: gera uma nova hash com:
+       echo -n "tua-password" | sha256sum
+     Cola o hex na constante PASSWORD_HASH.
+  */
+
+  // Hash de "admin2026" (TROCA-A assim que fizeres deploy — ver README)
+  const PASSWORD_HASH = "6051fc84a7a0d74c225fb18a496b09952da5642e60723ecae543298edd7d82d6";
+
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  const SESSION_KEY = "saudeaud_admin_session";
+
+  async function checkSession() {
+    const v = sessionStorage.getItem(SESSION_KEY);
+    if (v === PASSWORD_HASH) return true;
+    return false;
+  }
+
+  document.getElementById("login-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const pw = document.getElementById("pw").value;
+    const hash = await sha256(pw);
+    if (hash === PASSWORD_HASH) {
+      sessionStorage.setItem(SESSION_KEY, hash);
+      showDash();
+    } else {
+      document.getElementById("login-err").classList.add("show");
+    }
+  });
+
+  document.getElementById("logout").addEventListener("click", () => {
+    sessionStorage.removeItem(SESSION_KEY);
+    showGate();
+  });
+
+  function showGate() {
+    document.getElementById("gate").style.display = "";
+    document.getElementById("dash").style.display = "none";
+  }
+  function showDash() {
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("dash").style.display = "";
+    loadData();
+  }
+
+  /* ────────── Carregar dados ──────────*/
+  async function fetchJSON(path) {
+    try {
+      const r = await fetch(path, { cache: "no-cache" });
+      if (!r.ok) throw new Error(r.status);
+      return await r.json();
+    } catch (e) { return null; }
+  }
+
+  function fmtDate(iso) {
+    if (!iso) return "—";
+    try {
+      const d = new Date(iso);
+      return d.toLocaleDateString("pt-PT", { day: "2-digit", month: "short", year: "numeric" });
+    } catch (e) { return iso; }
+  }
+
+  function fmtRel(iso) {
+    if (!iso) return "—";
+    const d = new Date(iso);
+    const diff = (Date.now() - d.getTime()) / 1000;
+    if (diff < 60) return "agora mesmo";
+    if (diff < 3600) return `há ${Math.floor(diff/60)} min`;
+    if (diff < 86400) return `há ${Math.floor(diff/3600)} h`;
+    return `há ${Math.floor(diff/86400)} dias`;
+  }
+
+  async function loadData() {
+    const artigos = await fetchJSON("../artigos.json") || [];
+    const pendingSocial = await fetchJSON("../data/pending_social.json") || [];
+    const socialHistory = await fetchJSON("../data/social_history.json") || [];
+
+    // Stats
+    document.getElementById("st-total").textContent = artigos.length;
+    document.getElementById("st-total-sub").textContent = `incluindo ${artigos.filter(a => a.generated).length} gerados por IA`;
+
+    const thisMonth = new Date().toISOString().slice(0,7);
+    const inMonth = artigos.filter(a => (a.data || "").startsWith(thisMonth)).length;
+    document.getElementById("st-month").textContent = inMonth;
+
+    document.getElementById("st-social").textContent = pendingSocial.length;
+    const pendingEl = document.getElementById("st-social");
+    if (pendingSocial.length > 0) pendingEl.classList.add("warn");
+
+    // pending manual reviews são listados na directoria `pending/` mas não temos listing do browser.
+    // Usamos o endpoint do GitHub Contents API se disponível (opcional); de momento, mostramos estimativa.
+    document.getElementById("st-pending").textContent = "—";
+
+    // Lista artigos recentes
+    const pArt = document.getElementById("panel-artigos");
+    if (!artigos.length) {
+      pArt.innerHTML = '<div class="empty">Ainda sem artigos publicados.</div>';
+    } else {
+      pArt.innerHTML = artigos.slice(0, 10).map(a => `
+        <div class="row">
+          <div class="main">
+            <h4 class="title">${escape(a.titulo)}</h4>
+            <div class="meta">
+              ${escape(a.categoria)} · ${fmtDate(a.data)} · ${escape(a.tempo_leitura || "—")}
+              ${a.generated ? '<span class="status-pill ok" style="margin-left:.5rem">IA</span>' : ''}
+            </div>
+          </div>
+          <div class="actions">
+            <a class="mini-btn" href="../artigos/${escape(a.slug)}.html" target="_blank">Ver →</a>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    // Posts sociais (pendentes + histórico)
+    const pSoc = document.getElementById("panel-social");
+    const items = [
+      ...pendingSocial.map(p => ({...p, _status: "pending", _when: p.generated_at})),
+      ...socialHistory.slice(-10).reverse().map(h => ({...h, _status: "done", _when: h.attempted_at}))
+    ].slice(0, 15);
+    if (!items.length) {
+      pSoc.innerHTML = '<div class="empty">Sem actividade de redes sociais.</div>';
+    } else {
+      pSoc.innerHTML = items.map(it => {
+        let pills = "";
+        if (it._status === "pending") {
+          pills = '<span class="status-pill warn">Fila</span>';
+        } else {
+          const fb = it.facebook?.status;
+          const ig = it.instagram?.status;
+          if (fb === "ok") pills += '<span class="status-pill ok">FB ✓</span> ';
+          else if (fb === "error") pills += '<span class="status-pill err">FB ✗</span> ';
+          if (ig === "ok") pills += '<span class="status-pill ok">IG ✓</span>';
+          else if (ig === "error") pills += '<span class="status-pill err">IG ✗</span>';
+          else if (ig === "skipped_no_image") pills += '<span class="status-pill warn">IG sem imagem</span>';
+        }
+        return `
+          <div class="row">
+            <div class="main">
+              <h4 class="title">${escape(it.titulo || "—")}</h4>
+              <div class="meta">${fmtRel(it._when)} ${pills}</div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Pending manual
+    document.getElementById("panel-pending").innerHTML = `
+      <div class="empty">
+        Artigos não aprovados pelo verificador factual ficam em <code>pending/</code> no repositório.<br>
+        <a class="mini-btn" href="https://github.com/duartevassalo-byte/Saude-Auditiva/tree/main/pending" target="_blank" style="margin-top:.8rem; display:inline-block">Abrir no GitHub →</a>
+      </div>`;
+
+    // Cobertura por categoria
+    const cats = ["perda-auditiva", "sinais-alerta", "prevencao", "familia", "aparelhos"];
+    const labels = {
+      "perda-auditiva": "Perda Auditiva", "sinais-alerta": "Sinais de Alerta",
+      "prevencao": "Prevenção", "familia": "Família", "aparelhos": "Aparelhos"
+    };
+    const counts = Object.fromEntries(cats.map(c => [c, artigos.filter(a => a.categoria === c).length]));
+    document.getElementById("panel-cats").innerHTML = cats.map(c => `
+      <div class="row">
+        <div class="main">
+          <h4 class="title">${labels[c]}</h4>
+          <div class="meta">${counts[c]} artigo${counts[c] === 1 ? '' : 's'}</div>
+        </div>
+        <div class="actions">
+          <a class="mini-btn" href="../categoria/${c}.html" target="_blank">Abrir →</a>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  function escape(s) {
+    if (s == null) return "";
+    return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+  }
+
+  document.getElementById("refresh").addEventListener("click", (e) => { e.preventDefault(); loadData(); });
+
+  /* ────────── Init ────────── */
+  (async function(){
+    if (await checkSession()) showDash(); else showGate();
+  })();
+  </script>
+</body>
+</html>
