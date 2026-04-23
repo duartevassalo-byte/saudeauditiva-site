@@ -1284,3 +1284,110 @@ em { font-style: italic; color: var(--accent); }
 }
 .article-cta .btn-primary { background: var(--accent); }
 .article-cta .btn-primary:hover { background: #0f4a2a; }
+/* ═══════════════════════════════════════════════════════════
+   Mobile fixes (Apr 2026)
+   Adicionar AO FINAL do styles.css
+   ═══════════════════════════════════════════════════════════ */
+
+/* Safety net: impede overflow horizontal em qualquer viewport */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+/* Permite wrap de palavras longas em mobile (títulos, dek) */
+@media (max-width: 720px) {
+  h1, h2, h3, .featured-grid h2, .hero h1, .cat-hero h1, .article-full h1 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* Featured article meta — partir em wrap */
+  .featured-meta {
+    flex-wrap: wrap;
+    gap: .5rem .75rem;
+    font-size: .7rem;
+  }
+  .featured-meta .cat-tag {
+    padding-right: .75rem;
+    border-right: 1px solid var(--rule);
+  }
+  /* Esconder os separadores "·" redundantes em mobile — ficam feios com wrap */
+  .featured-meta span:nth-child(3),
+  .featured-meta span:nth-child(5) {
+    display: none;
+  }
+
+  /* Container com mais padding horizontal para não colar nos bordos */
+  .container, .container-narrow {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Hero title em ecrã pequeno: reduzir max-width para dar espaço */
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(1.75rem, 7vw, 2.4rem);
+  }
+  .hero-lead { font-size: 1.05rem; }
+
+  /* Featured grid h2 em mobile — diminuir */
+  .featured-grid h2 {
+    font-size: clamp(1.55rem, 6.5vw, 2rem);
+    line-height: 1.2;
+  }
+
+  .dek { font-size: 1.05rem; line-height: 1.5; }
+
+  /* Modal (consulta-box) — ajustar padding e título */
+  .modal {
+    width: calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
+    padding: 1.5rem 1.25rem;
+  }
+  .modal h3 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  /* Header — garantir que o botão hamburger nunca sai do viewport */
+  .site-header .container {
+    gap: 1rem;
+    padding-top: .85rem;
+    padding-bottom: .85rem;
+  }
+  .brand { font-size: 1.35rem; }
+  .brand small { font-size: .58rem; }
+
+  /* Section head typography em mobile */
+  .section-head h2 { font-size: clamp(1.4rem, 5.5vw, 1.85rem); }
+
+  /* Article cards — padding mais confortável em mobile */
+  .article-card, .featured-grid article {
+    padding: 0;
+  }
+}
+
+/* Breakpoint adicional para ecrãs muito pequenos (iPhone SE, 320–375px) */
+@media (max-width: 420px) {
+  body { font-size: 16px; }
+
+  .container, .container-narrow {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero h1 { font-size: clamp(1.55rem, 7.5vw, 2.1rem); }
+  .featured-grid h2 { font-size: clamp(1.4rem, 6.8vw, 1.8rem); }
+
+  /* Topbar já esconde badges em <720; aqui esconder info de contacto se necessário */
+  .topbar { font-size: .78rem; }
+  .topbar .container { padding: 0 1rem; }
+
+  /* Botões menos largos */
+  .btn { padding: .75rem 1.2rem; font-size: .9rem; }
+
+  /* Footer mais compacto */
+  .footer-grid { gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: .8rem; text-align: center; }
+  .footer-bottom .legal-list { justify-content: center; }
+}
