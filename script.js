@@ -40,40 +40,88 @@
 
 /* -------- Consultation form (inline & modal) -------- */
 (function(){
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdyknzg';
+
   document.querySelectorAll('form.consulta-form').forEach(form => {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = form.querySelector('button[type="submit"]');
       const successBox = form.parentElement.querySelector('.form-success');
+      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span class="spinner"></span> A enviar…';
       }
-      // Simulated submission — integrate with a backend/endpoint of your choice
-      setTimeout(() => {
-        form.style.display = 'none';
-        if (successBox) successBox.classList.add('show');
-      }, 700);
+
+      try {
+        // Recolher dados
+        const formData = new FormData(form);
+        formData.append('_subject', 'Nova consulta — saudeauditiva.pt');
+        formData.append('origem', 'saudeauditiva.pt — ' + (form.id || 'modal'));
+        formData.append('pagina', window.location.pathname);
+
+        const res = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          if (successBox) successBox.classList.add('show');
+        } else {
+          throw new Error('Submissão falhou (' + res.status + ')');
+        }
+      } catch (err) {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHTML;
+        }
+        alert('Não foi possível enviar o pedido. Por favor tente novamente ou contacte-nos directamente para geral@saudeauditiva.pt.');
+      }
     });
   });
 })();
 
 /* -------- Contact form -------- */
 (function(){
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdyknzg';
   const form = document.getElementById('contact-form');
   if (!form) return;
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const submitBtn = form.querySelector('button[type="submit"]');
     const successBox = document.getElementById('contact-success');
+    const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<span class="spinner"></span> A enviar…';
     }
-    setTimeout(() => {
-      form.style.display = 'none';
-      if (successBox) successBox.classList.add('show');
-    }, 700);
+
+    try {
+      const formData = new FormData(form);
+      formData.append('_subject', 'Mensagem de contacto — saudeauditiva.pt');
+      formData.append('origem', 'saudeauditiva.pt — formulário contacto');
+
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        if (successBox) successBox.classList.add('show');
+      } else {
+        throw new Error('Submissão falhou (' + res.status + ')');
+      }
+    } catch (err) {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+      }
+      alert('Não foi possível enviar a mensagem. Por favor tente novamente ou contacte-nos directamente para geral@saudeauditiva.pt.');
+    }
   });
 })();
 
