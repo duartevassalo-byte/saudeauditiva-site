@@ -121,6 +121,12 @@
               <option>Qualquer hora</option>
             </select>
           </div>
+          <div class="form-consent">
+            <label class="consent-row">
+              <input type="checkbox" name="consentimento" value="sim" required>
+              <span>Autorizo a Penguin Style, Lda. a partilhar o meu contacto com o centro auditivo parceiro (a definir consoante a minha região) para marcação da consulta e para contactos posteriores de seguimento (ex: marcação de exames, follow-up). <a href="${root}privacidade.html">Saber mais</a>.</span>
+            </label>
+          </div>
           <button type="submit" class="btn btn-primary btn-block btn-lg">Confirmar pedido de consulta →</button>
           <p class="form-hint">🔒 Dados confidenciais · usados apenas para marcar a sua consulta. Ver <a href="${root}privacidade.html">Política de Privacidade</a>.</p>
         </form>
@@ -129,6 +135,15 @@
           <p>A nossa equipa vai contactá-lo em breve para confirmar a data da consulta.</p>
         </div>
       </div>
+    </div>
+  `;
+
+  const mobileCTAHTML = `
+    <div class="mobile-cta-bar" id="mobile-cta-bar">
+      <a href="#" class="btn btn-primary btn-block" data-open-booking>
+        <span class="mobile-cta-icon">📞</span>
+        Marcar consulta gratuita
+      </a>
     </div>
   `;
 
@@ -141,6 +156,9 @@
   if (ft) ft.outerHTML = footerHTML;
   const md = document.getElementById('slot-modal');
   if (md) md.outerHTML = modalHTML;
+
+  // Inject mobile CTA at end of body
+  document.body.insertAdjacentHTML('beforeend', mobileCTAHTML);
 
   // Mark active nav (via <body data-page="...">)
   const activePage = document.body.dataset.page;
