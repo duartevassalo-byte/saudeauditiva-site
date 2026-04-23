@@ -11,63 +11,95 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div id="header-mount"></div>
+<body data-page="legal">
 
-  <main class="legal-page">
-    <div class="container-narrow">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Início</a> · <span>Informação legal</span>
-      </nav>
+  <div id="slot-topbar"></div>
+  <div id="slot-header"></div>
 
-      <div class="kicker">INFORMAÇÃO · LEGAL</div>
-      <h1>Informação legal</h1>
-      <p class="lead">Informação obrigatória sobre a entidade responsável pelo portal Saúde Auditiva, nos termos do Decreto-Lei n.º 7/2004, de 7 de janeiro (comércio eletrónico) e do Regulamento Geral de Proteção de Dados.</p>
-
-      <div class="prose">
-        <h2>Entidade responsável</h2>
-        <p>O portal <strong>saudeauditiva.pt</strong> é operado por:</p>
-        <div class="legal-block">
-          <p><strong>Penguin Style, Lda.</strong></p>
-          <p>NIPC: 515167657</p>
-          <p>Sede: Rua Dr. Henrique Carvalhão, Lote 12, Loja 1 · 6000-275 Castelo Branco, Portugal</p>
-          <p>Email: geral@saudeauditiva.pt</p>
+  <main>
+    <section class="cat-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Início</a> · <span>Informação legal</span>
         </div>
-
-        <h2>Natureza do portal</h2>
-        <p>O saudeauditiva.pt é um portal informativo sobre saúde auditiva em Portugal. O conteúdo editorial visa a divulgação de informação de interesse público, citando fontes científicas quando aplicável, e não constitui aconselhamento clínico. Para questões clínicas, o utilizador deve consultar um profissional de saúde.</p>
-
-        <h2>Uso de inteligência artificial</h2>
-        <p>Parte do conteúdo editorial deste portal é gerado com recurso a modelos de inteligência artificial, submetido a verificação factual automática por um segundo modelo e, quando aplicável, a revisão humana. Cada artigo gerado desta forma é identificado como tal, em conformidade com as obrigações de transparência previstas no Regulamento (UE) 2024/1689 (AI Act).</p>
-
-        <h2>Alojamento</h2>
-        <p>O site é alojado na GitHub Pages, propriedade da GitHub, Inc. O tráfego e os dados técnicos do servidor são geridos por essa entidade. A Penguin Style, Lda. não tem acesso a registos detalhados de navegação ao nível da infraestrutura.</p>
-
-        <h2>Propriedade intelectual</h2>
-        <p>Os conteúdos editoriais, identidade visual e estrutura do portal são propriedade da Penguin Style, Lda. A reprodução para fins não comerciais é permitida desde que com citação expressa da fonte (saudeauditiva.pt) e ligação para a página original. Para qualquer outro uso, é necessária autorização escrita.</p>
-
-        <h2>Responsabilidade</h2>
-        <p>A Penguin Style, Lda. esforça-se por manter a informação atualizada e rigorosa, mas não garante a ausência de erros ou omissões. O portal não substitui o aconselhamento de um profissional de saúde qualificado.</p>
-
-        <h2>Reclamações</h2>
-        <p>Para apresentar uma reclamação, pode utilizar o email <a href="mailto:geral@saudeauditiva.pt">geral@saudeauditiva.pt</a> ou aceder ao <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações Eletrónico</a>.</p>
-
-        <h2>Resolução alternativa de litígios</h2>
-        <p>Em caso de litígio de consumo, o consumidor pode recorrer a uma entidade de resolução alternativa de litígios de consumo. Informação disponível no portal do consumidor: <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">consumidor.gov.pt</a>.</p>
-
-        <h2>Ligações úteis</h2>
-        <ul>
-          <li><a href="privacidade.html">Política de Privacidade</a></li>
-          <li><a href="termos.html">Termos de Uso</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-
-        <p class="meta-info">Última atualização: abril de 2026</p>
+        <span class="kicker">Informação · Legal</span>
+        <h1>Informação legal</h1>
+        <p class="lead">Informação obrigatória sobre a entidade responsável pelo portal Saúde Auditiva, nos termos do Decreto-Lei n.º 7/2004, de 7 de janeiro, e do Regulamento Geral de Proteção de Dados.</p>
       </div>
-    </div>
+    </section>
+
+    <section class="cat-content">
+      <div class="container">
+        <div class="cat-content-grid">
+          <div class="prose">
+
+            <h2>Entidade responsável</h2>
+            <p>O portal <strong>saudeauditiva.pt</strong> é operado por:</p>
+            <div class="fact-box">
+              <strong>Penguin Style, Lda.</strong>
+              NIPC: 515167657<br>
+              Sede: Rua Dr. Henrique Carvalhão, Lote 12, Loja 1 · 6000-275 Castelo Branco, Portugal<br>
+              Email: <a href="mailto:geral@saudeauditiva.pt">geral@saudeauditiva.pt</a>
+            </div>
+
+            <h2>Natureza do portal</h2>
+            <p>O saudeauditiva.pt é um portal informativo sobre saúde auditiva em Portugal. O conteúdo editorial visa a divulgação de informação de interesse público, citando fontes científicas quando aplicável, e <strong>não constitui aconselhamento clínico</strong>. Para questões clínicas, o utilizador deve consultar um profissional de saúde qualificado.</p>
+
+            <h2>Uso de inteligência artificial</h2>
+            <p>Parte do conteúdo editorial deste portal é gerado com recurso a modelos de inteligência artificial, submetido a verificação factual automática por um segundo modelo e, quando aplicável, a revisão humana. Cada artigo gerado desta forma é identificado como tal, em conformidade com as obrigações de transparência previstas no Regulamento (UE) 2024/1689 (AI Act).</p>
+            <p>Para mais detalhes sobre o nosso processo editorial, consulte a página <a href="sobre.html">Sobre Nós</a>.</p>
+
+            <h2>Alojamento</h2>
+            <p>O site é alojado na GitHub Pages, propriedade da GitHub, Inc. O tráfego e os dados técnicos do servidor são geridos por essa entidade. A Penguin Style, Lda. não tem acesso a registos detalhados de navegação ao nível da infraestrutura.</p>
+
+            <h2>Propriedade intelectual</h2>
+            <p>Os conteúdos editoriais, identidade visual e estrutura do portal são propriedade da Penguin Style, Lda. A reprodução para fins não comerciais é permitida desde que com citação expressa da fonte (saudeauditiva.pt) e ligação para a página original. Para qualquer outro uso, é necessária autorização escrita.</p>
+
+            <h2>Limitação de responsabilidade</h2>
+            <p>A Penguin Style, Lda. esforça-se por manter a informação actualizada e rigorosa, mas não garante a ausência de erros ou omissões. O portal não substitui o aconselhamento de um profissional de saúde qualificado. A Penguin Style, Lda. não se responsabiliza por decisões tomadas com base exclusivamente na informação aqui publicada.</p>
+
+            <h2>Reclamações</h2>
+            <p>Para apresentar uma reclamação, pode utilizar o email <a href="mailto:geral@saudeauditiva.pt">geral@saudeauditiva.pt</a> ou aceder ao <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Livro de Reclamações Electrónico</a>.</p>
+
+            <h2>Resolução alternativa de litígios</h2>
+            <p>Em caso de litígio de consumo, o consumidor pode recorrer a uma entidade de resolução alternativa de litígios de consumo. Informação disponível no portal do consumidor: <a href="https://www.consumidor.gov.pt" target="_blank" rel="noopener">consumidor.gov.pt</a>.</p>
+
+            <h2>Ligações úteis</h2>
+            <ul>
+              <li><a href="privacidade.html">Política de Privacidade</a></li>
+              <li><a href="termos.html">Termos de Uso</a></li>
+              <li><a href="sobre.html">Sobre Nós</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <p><em>Última actualização: abril de 2026</em></p>
+
+          </div>
+
+          <aside class="sidebar">
+            <div class="side-cta">
+              <h4>Consulta gratuita</h4>
+              <p>Uma avaliação auditiva profissional, sem custos e sem compromisso, em cerca de 30 minutos.</p>
+              <a href="#" class="btn btn-primary" data-open-booking>Marcar consulta →</a>
+            </div>
+            <div class="nav-cats">
+              <h5>Navegar</h5>
+              <a href="index.html">Início</a>
+              <a href="categoria/perda-auditiva.html">Perda Auditiva</a>
+              <a href="categoria/sinais-alerta.html">Sinais de Alerta</a>
+              <a href="categoria/prevencao.html">Prevenção</a>
+              <a href="categoria/familia.html">Família</a>
+              <a href="categoria/aparelhos.html">Aparelhos</a>
+              <a href="contacto.html">Contacto</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <div id="footer-mount"></div>
+  <div id="slot-footer"></div>
+  <div id="slot-modal"></div>
 
   <script src="partials.js"></script>
   <script src="script.js"></script>
