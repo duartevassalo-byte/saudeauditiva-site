@@ -84,10 +84,11 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <div>© <span id="current-year"></span> Saúde Auditiva · Penguin Style Lda · NIPC 515167657</div>
+          <div>© <span id="current-year"></span> Saúde Auditiva</div>
           <div class="legal-list">
             <a href="${root}privacidade.html">Privacidade</a>
             <a href="${root}termos.html">Termos</a>
+            <a href="${root}legal.html">Informação legal</a>
             <a href="${root}contacto.html">Contacto</a>
           </div>
         </div>
