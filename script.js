@@ -267,12 +267,12 @@
   const slots = document.querySelectorAll('[data-articles]');
   if (!slots.length) return;
 
-  // Detectar root (igual ao partials.js): data-root no <script> ou auto-detectar por pathname
+  // Detectar root: data-root no <script> ou auto-detectar pelo pathname da página atual
   const scriptEl = document.currentScript || document.querySelector('script[src$="script.js"]');
   const rootAttr = scriptEl && scriptEl.dataset ? scriptEl.dataset.root : '';
-  // Se o script está em ../script.js, o root é "../" . Caso contrário é "".
-  const ROOT = rootAttr || (scriptEl && scriptEl.src && scriptEl.src.includes('/categoria/') ? '../' :
-               (scriptEl && scriptEl.src && scriptEl.src.includes('/artigos/') ? '../' : ''));
+  // Fallback: usar window.location.pathname (mais fiável que scriptEl.src, que o browser normaliza)
+  const path = window.location.pathname || '';
+  const ROOT = rootAttr || (path.includes('/categoria/') || path.includes('/artigos/') || path.includes('/admin/') ? '../' : '');
 
   const CATEGORIES = {
     "perda-auditiva":  { label: "Perda Auditiva",  slug: "perda-auditiva"  },
