@@ -267,6 +267,13 @@
   const slots = document.querySelectorAll('[data-articles]');
   if (!slots.length) return;
 
+  // Detectar root (igual ao partials.js): data-root no <script> ou auto-detectar por pathname
+  const scriptEl = document.currentScript || document.querySelector('script[src$="script.js"]');
+  const rootAttr = scriptEl && scriptEl.dataset ? scriptEl.dataset.root : '';
+  // Se o script está em ../script.js, o root é "../" . Caso contrário é "".
+  const ROOT = rootAttr || (scriptEl && scriptEl.src && scriptEl.src.includes('/categoria/') ? '../' :
+               (scriptEl && scriptEl.src && scriptEl.src.includes('/artigos/') ? '../' : ''));
+
   const CATEGORIES = {
     "perda-auditiva":  { label: "Perda Auditiva",  slug: "perda-auditiva"  },
     "sinais-alerta":   { label: "Sinais de Alerta", slug: "sinais-alerta"  },
@@ -285,7 +292,7 @@
 
   function card(a) {
     const cat = CATEGORIES[a.categoria] || { label: a.categoria, slug: a.categoria };
-    const href = a.slug ? `artigos/${a.slug}.html` : '#';
+    const href = a.slug ? `${ROOT}artigos/${a.slug}.html` : '#';
     return `
       <a href="${href}" class="article-card">
         <div class="card-meta">
@@ -339,7 +346,7 @@
             <div class="category-block">
               <div class="category-head">
                 <h3><span class="num">${cat.slug.replace('-', ' ').toUpperCase()}</span>${cat.label}</h3>
-                <a href="categoria/${cat.slug}.html" class="see-more">Ver todos</a>
+                <a href="${ROOT}categoria/${cat.slug}.html" class="see-more">Ver todos</a>
               </div>
               <div class="articles-grid">
                 ${list.map(card).join('')}
