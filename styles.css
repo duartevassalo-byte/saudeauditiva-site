@@ -1582,3 +1582,101 @@ html, body { overflow-x: hidden; max-width: 100%; }
 /* When booking modal is open, don't show mobile CTA */
 .modal-overlay.active ~ .mobile-cta-bar,
 body:has(.modal-overlay.active) .mobile-cta-bar { display: none !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   Bottom CTAs em páginas de categoria (Apr 2026)
+   ═══════════════════════════════════════════════════════════ */
+.cat-bottom-cta {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+  background: var(--paper-dim);
+  border-top: 1px solid var(--rule);
+}
+.cat-bottom-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: stretch;
+}
+.cat-bottom-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+}
+.cat-bottom-card.dark {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.cat-bottom-card .kicker {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .8rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--accent);
+  align-self: flex-start;
+}
+.cat-bottom-card.dark .kicker {
+  color: #9fd4b5;
+  border-color: #9fd4b5;
+}
+.cat-bottom-card h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  line-height: 1.2;
+  margin-bottom: .6rem;
+  color: var(--ink);
+}
+.cat-bottom-card.dark h3 { color: var(--paper); }
+.cat-bottom-card p {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+.cat-bottom-card.dark p { color: rgba(249,247,243,.75); }
+.cat-bottom-card .card-footer {
+  font-family: var(--sans);
+  font-size: .82rem;
+  color: var(--ink-mute);
+  margin-top: .8rem;
+  letter-spacing: .02em;
+}
+.cat-bottom-card.dark .card-footer { color: rgba(249,247,243,.55); }
+.cat-bottom-card .btn { align-self: flex-start; }
+@media (max-width: 720px) {
+  .cat-bottom-cta-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .cat-bottom-card .btn { width: 100%; justify-content: center; }
+}
+
+/* Side test block in category sidebar */
+.side-test {
+  background: rgba(26, 92, 58, 0.04);
+  border: 1px solid rgba(26, 92, 58, 0.2);
+  padding: 1.3rem;
+  margin-bottom: 1.5rem;
+  border-radius: 3px;
+}
+.side-test h5 {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .6rem;
+}
+.side-test p {
+  font-size: .92rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+.btn-block { width: 100%; text-align: center; justify-content: center; }
