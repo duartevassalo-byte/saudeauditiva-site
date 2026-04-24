@@ -1680,3 +1680,82 @@ body:has(.modal-overlay.active) .mobile-cta-bar { display: none !important; }
   margin-bottom: 1rem;
 }
 .btn-block { width: 100%; text-align: center; justify-content: center; }
+
+/* ═══════════════════════════════════════════════════════════
+   Fim de artigo — bloco de conversão (Apr 2026)
+   2 colunas: copy + form de consulta
+   ═══════════════════════════════════════════════════════════ */
+.article-end-cta {
+  background: var(--paper-dim);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+.article-end-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+}
+.article-end-cta-copy {
+  padding-top: .5rem;
+}
+.article-end-cta-copy .kicker {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .8rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+.article-end-cta-copy h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.15;
+  margin: .8rem 0 1rem;
+  color: var(--ink);
+  letter-spacing: -.01em;
+}
+.article-end-cta-copy p {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: 1rem;
+}
+.article-end-cta-copy .trust-row {
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.8rem;
+  font-family: var(--sans);
+  font-size: .88rem;
+  color: var(--ink-mute);
+}
+.article-end-cta-copy .trust-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+}
+.article-end-cta-copy .trust-row strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+.article-end-cta-copy .alt-test {
+  margin-top: 1.2rem;
+  font-size: .95rem;
+}
+.article-end-cta-copy .alt-test a {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: 1px solid var(--accent);
+}
+@media (max-width: 820px) {
+  .article-end-cta-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+}
