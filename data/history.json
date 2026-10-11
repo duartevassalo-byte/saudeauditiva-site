@@ -1,0 +1,128 @@
+[
+  {
+    "topic_id": "pa-001",
+    "slug": "tempo-medio-diagnostico-perda-auditiva",
+    "titulo": "Sete anos: o tempo médio entre os primeiros sinais e o diagnóstico",
+    "published_at": "2026-04-15"
+  },
+  {
+    "topic_id": "pa-002",
+    "slug": "tipos-perda-auditiva",
+    "titulo": "Perda neurossensorial, condutiva ou mista — qual é a diferença?",
+    "published_at": "2026-04-10"
+  },
+  {
+    "topic_id": "pa-003",
+    "slug": "presbiacusia-envelhecimento",
+    "titulo": "Presbiacusia: a perda auditiva associada à idade",
+    "published_at": "2026-04-02"
+  },
+  {
+    "topic_id": "sa-001",
+    "slug": "volume-televisao-sinal",
+    "titulo": "Quando o volume da televisão se torna um sinal clínico",
+    "published_at": "2026-04-12"
+  },
+  {
+    "topic_id": "sa-002",
+    "slug": "zumbido-acufenos",
+    "titulo": "Zumbidos e acufenos: quando se deve preocupar",
+    "published_at": "2026-04-05"
+  },
+  {
+    "topic_id": "sa-003",
+    "slug": "dificuldade-ruido-fundo",
+    "titulo": "Dificuldade em ouvir em locais com ruído: o sinal mais ignorado",
+    "published_at": "2026-03-28"
+  },
+  {
+    "topic_id": "pr-002",
+    "slug": "ruido-no-trabalho",
+    "titulo": "Exposição a ruído no trabalho: o que diz a lei e o que pode fazer",
+    "published_at": "2026-04-14"
+  },
+  {
+    "topic_id": "pr-001",
+    "slug": "auscultadores-regra-60-60",
+    "titulo": "A regra dos 60/60 para auscultadores (e porque é importante)",
+    "published_at": "2026-04-08"
+  },
+  {
+    "topic_id": "pr-003",
+    "slug": "check-up-auditivo-periodico",
+    "titulo": "Check-up auditivo: com que frequência o deve fazer?",
+    "published_at": "2026-03-30"
+  },
+  {
+    "topic_id": "fa-001",
+    "slug": "falar-com-familiar-audicao",
+    "titulo": "Como abordar um familiar sobre a perda auditiva sem conflitos",
+    "published_at": "2026-04-16"
+  },
+  {
+    "topic_id": "fa-002",
+    "slug": "impacto-isolamento-social",
+    "titulo": "O impacto silencioso da perda auditiva no isolamento social",
+    "published_at": "2026-04-01"
+  },
+  {
+    "topic_id": "fa-003",
+    "slug": "netos-avos-comunicacao",
+    "titulo": "Netos e avós: estratégias simples para melhorar a comunicação",
+    "published_at": "2026-03-25"
+  },
+  {
+    "topic_id": "ap-001",
+    "slug": "quanto-custa-aparelho-auditivo",
+    "titulo": "Quanto custa um aparelho auditivo em Portugal em 2026",
+    "published_at": "2026-04-18"
+  },
+  {
+    "topic_id": "ap-002",
+    "slug": "aparelho-auditivo-adaptacao",
+    "titulo": "Adaptação aos aparelhos auditivos: o que esperar nas primeiras semanas",
+    "published_at": "2026-04-06"
+  },
+  {
+    "topic_id": "ap-003",
+    "slug": "aparelhos-invisiveis-vs-bte",
+    "titulo": "Aparelhos invisíveis vs. retroauriculares: o que escolher?",
+    "published_at": "2026-03-29"
+  },
+  {
+    "topic_id": "ap-005",
+    "slug": "manutencao-diaria-aparelhos-auditivos",
+    "titulo": "Manutenção diária dos aparelhos auditivos: guia prático",
+    "published_at": "2026-10-11"
+  },
+  {
+    "topic_id": "fa-006",
+    "slug": "filhos-adultos-pais-perda-auditiva",
+    "titulo": "Os seus pais ouvem mal? Como ajudar sem os afastar",
+    "published_at": "2026-10-11"
+  },
+  {
+    "topic_id": "pr-008",
+    "slug": "diabetes-e-audicao",
+    "titulo": "Diabetes e audição: a ligação que pouca gente conhece",
+    "published_at": "2026-10-11"
+  },
+  {
+    "topic_id": "sa-007",
+    "slug": "cansaco-apos-conversas-esforco-auditivo",
+    "titulo": "Cansado depois de conversar? Pode ser esforço auditivo",
+    "published_at": "2026-10-11"
+  },
+  {
+    "topic_id": "pa-005",
+    "slug": "perda-auditiva-subita-urgencia",
+    "titulo": "Perda auditiva súbita: porque é uma urgência médica",
+    "published_at": "2026-10-11"
+  },
+  {
+    "topic_id": "pa-007",
+    "slug": "perda-auditiva-demencia",
+    "titulo": "Perda auditiva e demência: o que a ciência já sabe",
+    "published_at": "2026-10-11"
+  }
+]

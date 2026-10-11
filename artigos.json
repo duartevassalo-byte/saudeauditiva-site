@@ -1,5 +1,59 @@
 [
   {
+    "slug": "perda-auditiva-demencia",
+    "titulo": "Perda auditiva e demência: o que a ciência já sabe",
+    "categoria": "perda-auditiva",
+    "resumo": "A perda auditiva é hoje apontada como um dos maiores factores de risco modificáveis para a demência. O que dizem os estudos — e o que isso significa na prática.",
+    "data": "2026-10-11",
+    "tempo_leitura": "4 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "perda-auditiva-subita-urgencia",
+    "titulo": "Perda auditiva súbita: porque é uma urgência médica",
+    "categoria": "perda-auditiva",
+    "resumo": "Acordar a ouvir mal de um ouvido não deve ser ignorado. A perda auditiva súbita exige avaliação médica rápida — e as primeiras horas e dias contam.",
+    "data": "2026-10-11",
+    "tempo_leitura": "3 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "cansaco-apos-conversas-esforco-auditivo",
+    "titulo": "Cansado depois de conversar? Pode ser esforço auditivo",
+    "categoria": "sinais-alerta",
+    "resumo": "Sentir-se esgotado ao fim de um almoço de família ou de uma reunião pode ser um sinal precoce de perda auditiva. Explicamos o que é o esforço auditivo.",
+    "data": "2026-10-11",
+    "tempo_leitura": "3 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "diabetes-e-audicao",
+    "titulo": "Diabetes e audição: a ligação que pouca gente conhece",
+    "categoria": "prevencao",
+    "resumo": "A perda auditiva é cerca de duas vezes mais frequente em pessoas com diabetes. Porque acontece e porque a avaliação auditiva deve fazer parte do acompanhamento.",
+    "data": "2026-10-11",
+    "tempo_leitura": "3 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "filhos-adultos-pais-perda-auditiva",
+    "titulo": "Os seus pais ouvem mal? Como ajudar sem os afastar",
+    "categoria": "familia",
+    "resumo": "Muitos filhos adultos percebem que os pais ouvem mal antes deles próprios. Um guia prático para abordar o tema, apoiar a decisão e acompanhar o processo.",
+    "data": "2026-10-11",
+    "tempo_leitura": "3 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
+    "slug": "manutencao-diaria-aparelhos-auditivos",
+    "titulo": "Manutenção diária dos aparelhos auditivos: guia prático",
+    "categoria": "aparelhos",
+    "resumo": "Cinco minutos por dia chegam para manter os aparelhos auditivos a funcionar bem durante anos. O que limpar, como guardar e os erros mais comuns.",
+    "data": "2026-10-11",
+    "tempo_leitura": "3 min",
+    "autor": "Redacção Saúde Auditiva"
+  },
+  {
     "slug": "tempo-medio-diagnostico-perda-auditiva",
     "titulo": "Sete anos: o tempo médio entre os primeiros sinais e o diagnóstico",
     "categoria": "perda-auditiva",
