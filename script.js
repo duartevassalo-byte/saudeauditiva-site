@@ -38,6 +38,16 @@
   });
 })();
 
+/* -------- Cópia de cada lead para a Google Sheet (Apps Script) -------- */
+const LEADS_SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzIkkYVOvffUVxlN9Yu-tFR9R9QCv9BXaztjU3cUfLETfP6nhI5C3LjRK9Z21_aWslA/exec';
+function enviarLeadParaSheet(formData) {
+  try {
+    const params = new URLSearchParams();
+    for (const [k, v] of formData.entries()) { if (typeof v === 'string') params.append(k, v); }
+    fetch(LEADS_SHEET_ENDPOINT, { method: 'POST', mode: 'no-cors', body: params, keepalive: true }).catch(() => {});
+  } catch (e) { /* nunca bloqueia o envio do formulário */ }
+}
+
 /* -------- Consultation form (inline & modal) -------- */
 (function(){
   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzdyknzg';
@@ -59,6 +69,7 @@
         formData.append('_subject', 'Nova consulta — saudeauditiva.pt');
         formData.append('origem', 'saudeauditiva.pt — ' + (form.id || 'modal'));
         formData.append('pagina', window.location.pathname);
+        enviarLeadParaSheet(formData);
 
         const res = await fetch(FORMSPREE_ENDPOINT, {
           method: 'POST',
@@ -102,6 +113,8 @@
       const formData = new FormData(form);
       formData.append('_subject', 'Mensagem de contacto — saudeauditiva.pt');
       formData.append('origem', 'saudeauditiva.pt — formulário contacto');
+      formData.append('pagina', window.location.pathname);
+      enviarLeadParaSheet(formData);
 
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
