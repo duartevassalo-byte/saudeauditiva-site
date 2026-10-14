@@ -1,5 +1,27 @@
 [
   {
+    "slug": "dificuldade-ouvir-telefone",
+    "titulo": "Dificuldade ao telefone: um sinal precoce de perda auditiva",
+    "categoria": "sinais-alerta",
+    "resumo": "Sem leitura labial e com som mais pobre, o telefone é exigente para os ouvidos. Quando as chamadas se tornam difíceis, pode ser um primeiro sinal de perda auditiva.",
+    "data": "2026-10-14",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/dificuldade-ouvir-telefone.jpg",
+    "social": {
+      "facebook": "Ao telefone pede muitas vezes para repetir, ou culpa a rede porque não percebe bem o que lhe dizem? É uma situação mais comum do que parece.\n\nAo telefone não há leitura labial nem expressões do rosto, e o som é mais pobre. Por isso, as primeiras dificuldades de audição aparecem muitas vezes aí, antes de se notarem cara a cara.\n\nNo artigo explicamos porque é que isto acontece, que sinais merecem atenção e o que pode ajudar nas chamadas do dia-a-dia.",
+      "instagram": "Pedir para repetir ao telefone ou culpar sempre a rede? Sem leitura labial, as chamadas revelam muitas vezes as primeiras dificuldades de audição.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#sinaisdealerta",
+        "#perdaauditiva",
+        "#audicao",
+        "#telefone",
+        "#presbiacusia"
+      ]
+    }
+  },
+  {
     "slug": "limpeza-ouvidos-cotonetes",
     "titulo": "Limpar os ouvidos: porque o cotonete não é boa ideia",
     "categoria": "prevencao",
