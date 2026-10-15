@@ -1,5 +1,27 @@
 [
   {
+    "slug": "dois-aparelhos-auditivos-binauralidade",
+    "titulo": "Dois aparelhos ou um? Porque ouvir com os dois ouvidos importa",
+    "categoria": "aparelhos",
+    "resumo": "Quando a perda auditiva afecta os dois ouvidos, usar dois aparelhos ajuda a localizar sons e a perceber melhor a fala no ruído. Saiba porquê e em que casos.",
+    "data": "2026-10-15",
+    "tempo_leitura": "5 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/dois-aparelhos-auditivos-binauralidade.jpg",
+    "social": {
+      "facebook": "Num almoço de família, tem dificuldade em perceber quem fala do outro lado da mesa, ou em saber de onde vem uma voz? Quando a perda auditiva afecta os dois ouvidos, isto é frequente.\n\nO cérebro usa a informação dos dois ouvidos para localizar sons e separar a fala do ruído. Por isso, na maioria das perdas bilaterais, os profissionais recomendam dois aparelhos em vez de um.\n\nNo artigo explicamos o que se ganha com a audição binaural, em que casos um só aparelho pode fazer sentido e que perguntas levar à consulta.",
+      "instagram": "Um aparelho ou dois? Quando a perda auditiva afecta ambos os ouvidos, ouvir com os dois ajuda a localizar sons e a perceber melhor a fala no ruído.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#aparelhosauditivos",
+        "#perdaauditiva",
+        "#audicao",
+        "#audicaobinaural",
+        "#ouvirmelhor"
+      ]
+    }
+  },
+  {
     "slug": "dificuldade-ouvir-telefone",
     "titulo": "Dificuldade ao telefone: um sinal precoce de perda auditiva",
     "categoria": "sinais-alerta",
