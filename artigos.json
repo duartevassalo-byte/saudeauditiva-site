@@ -1,5 +1,27 @@
 [
   {
+    "slug": "otosclerose",
+    "titulo": "Otosclerose: uma causa de perda auditiva com tratamento",
+    "categoria": "perda-auditiva",
+    "resumo": "A otosclerose fixa um pequeno osso do ouvido médio e causa uma perda auditiva gradual. Saiba como se manifesta, como se diagnostica e que tratamentos existem.",
+    "data": "2026-10-16",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/otosclerose.jpg",
+    "social": {
+      "facebook": "Sente que ouve pior há anos, mas sempre achou que era da idade? Nem toda a perda auditiva tem a mesma origem.\n\nNa otosclerose, um pequeno osso do ouvido médio, o estribo, vai perdendo mobilidade e o som deixa de chegar bem ao ouvido interno. Evolui devagar, pode ter componente hereditária e, em muitos casos, tem tratamento.\n\nNo artigo explicamos os sinais mais comuns, como se faz o diagnóstico e quais as opções: vigilância, aparelhos auditivos ou cirurgia.",
+      "instagram": "Nem toda a perda auditiva é da idade. A otosclerose fixa um pequeno osso do ouvido médio e, em muitos casos, pode ser tratada com aparelhos ou cirurgia.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#otosclerose",
+        "#perdaauditiva",
+        "#audicao",
+        "#otorrinolaringologia",
+        "#ouvirmelhor"
+      ]
+    }
+  },
+  {
     "slug": "dois-aparelhos-auditivos-binauralidade",
     "titulo": "Dois aparelhos ou um? Porque ouvir com os dois ouvidos importa",
     "categoria": "aparelhos",
