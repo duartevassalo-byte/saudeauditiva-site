@@ -1,5 +1,28 @@
 [
   {
+    "slug": "medicamentos-ototoxicos",
+    "titulo": "Medicamentos ototóxicos: quando um remédio afecta a audição",
+    "categoria": "prevencao",
+    "resumo": "Alguns medicamentos podem afectar o ouvido interno. Saiba quais são os grupos mais conhecidos, que sinais vigiar e porque nunca deve suspender um tratamento por conta própria.",
+    "data": "2026-10-18",
+    "tempo_leitura": "5 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/medicamentos-ototoxicos.jpg",
+    "social": {
+      "facebook": "Sabia que alguns medicamentos podem afectar a audição? A maioria não tem qualquer efeito sobre os ouvidos, mas há grupos bem conhecidos, como certos antibióticos usados no hospital e alguns tratamentos de quimioterapia.\n\nUm zumbido novo, dificuldade em ouvir ou desequilíbrio durante um tratamento devem ser comunicados ao médico. E nunca deve suspender um medicamento por conta própria.\n\nNo artigo explicamos quais são os medicamentos mais conhecidos, que sinais vigiar e como se faz a prevenção.",
+      "instagram": "Alguns medicamentos podem afectar a audição ou o equilíbrio. Se notar um zumbido novo durante um tratamento, fale com o médico — mas nunca suspenda a medicação por conta própria.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#medicamentos",
+        "#ototoxicidade",
+        "#perdaauditiva",
+        "#zumbido",
+        "#prevencao",
+        "#audicao"
+      ]
+    }
+  },
+  {
     "slug": "ouvido-tapado-causas",
     "titulo": "Ouvido tapado: causas comuns e quando consultar",
     "categoria": "sinais-alerta",
