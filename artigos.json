@@ -1,5 +1,27 @@
 [
   {
+    "slug": "doenca-de-meniere",
+    "titulo": "Doença de Ménière: vertigens, zumbido e audição que oscila",
+    "categoria": "perda-auditiva",
+    "resumo": "Crises de vertigem, zumbido e audição que vai e vem num ouvido: o que é a doença de Ménière e como se diagnostica e trata.",
+    "data": "2026-10-20",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/doenca-de-meniere.jpg",
+    "social": {
+      "facebook": "Já sentiu o quarto a girar de repente, com um ouvido abafado e um zumbido que não passa?\n\nEstes sintomas, quando surgem em crises e se repetem, podem estar ligados à doença de Ménière, uma perturbação do ouvido interno que afecta a audição e o equilíbrio. Não tem cura, mas há formas de reduzir as crises e viver melhor.\n\nNo novo artigo explicamos os sintomas típicos, como se chega ao diagnóstico e que opções existem, e quando uma vertigem exige ajuda urgente.",
+      "instagram": "Vertigens, zumbido e audição que vai e vem num ouvido? Saiba o que é a doença de Ménière e como se diagnostica e trata.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#doencademeniere",
+        "#vertigem",
+        "#zumbido",
+        "#perdaauditiva",
+        "#ouvidointerno"
+      ]
+    }
+  },
+  {
     "slug": "refeicoes-familia-perda-auditiva",
     "titulo": "Refeições em família quando alguém ouve mal",
     "categoria": "familia",
