@@ -1,5 +1,27 @@
 [
   {
+    "slug": "implante-coclear",
+    "titulo": "Implante coclear: quando é a solução certa",
+    "categoria": "aparelhos",
+    "resumo": "Quando os aparelhos auditivos já não chegam para compreender a fala, o implante coclear pode ser uma opção. Saiba como funciona e a quem se destina.",
+    "data": "2026-10-21",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/implante-coclear.jpg",
+    "social": {
+      "facebook": "Usa aparelhos auditivos e, mesmo assim, continua a não perceber o que lhe dizem? Ou conhece alguém nessa situação?\n\nQuando a perda auditiva é severa a profunda, amplificar o som pode já não ser suficiente. O implante coclear funciona de outra forma: estimula directamente o nervo auditivo.\n\nNo novo artigo explicamos o que é um implante coclear, quem pode beneficiar, como decorre o processo e que expectativas são realistas.",
+      "instagram": "Quando os aparelhos auditivos já não chegam para compreender a fala, o implante coclear pode ser uma opção. Saiba como funciona e a quem se destina.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#implantecoclear",
+        "#perdaauditiva",
+        "#surdez",
+        "#audicao",
+        "#aparelhosauditivos"
+      ]
+    }
+  },
+  {
     "slug": "doenca-de-meniere",
     "titulo": "Doença de Ménière: vertigens, zumbido e audição que oscila",
     "categoria": "perda-auditiva",
