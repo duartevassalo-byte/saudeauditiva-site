@@ -1,5 +1,27 @@
 [
   {
+    "slug": "graus-perda-auditiva",
+    "titulo": "Graus de perda auditiva: do ligeiro ao profundo",
+    "categoria": "perda-auditiva",
+    "resumo": "Ligeira, moderada, severa, profunda: o que significa cada grau de perda auditiva, como se mede no audiograma e como se reflecte nas conversas do dia-a-dia.",
+    "data": "2026-10-24",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/graus-perda-auditiva.jpg",
+    "social": {
+      "facebook": "\"Disseram-me que tenho uma perda ligeira.\" Mas o que quer isso dizer, na prática?\n\nO audiograma classifica a perda auditiva por graus, do ligeiro ao profundo, conforme a intensidade que um som precisa de ter para ser ouvido. Uma perda ligeira pode notar-se só em restaurantes; uma moderada já torna difíceis as conversas do dia-a-dia.\n\nNo novo artigo explicamos a escala usada pela OMS, o que cada grau significa no quotidiano e que perguntas fazer na consulta.",
+      "instagram": "Ligeira, moderada, severa ou profunda: o que significa cada grau de perda auditiva e como se reflecte nas conversas do dia-a-dia.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#perdaauditiva",
+        "#audiograma",
+        "#audicao",
+        "#saude50mais",
+        "#ouvirbem"
+      ]
+    }
+  },
+  {
     "slug": "tabagismo-perda-auditiva",
     "titulo": "Tabagismo e audição: mais um motivo para deixar de fumar",
     "categoria": "prevencao",
