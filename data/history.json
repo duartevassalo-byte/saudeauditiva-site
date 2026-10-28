@@ -220,5 +220,11 @@
     "slug": "pedir-para-repetir-sinal-alerta",
     "titulo": "Pedir para repetir: quando é sinal de alerta",
     "published_at": "2026-10-27"
+  },
+  {
+    "topic_id": "pr-006",
+    "slug": "ruido-em-casa",
+    "titulo": "Ruído em casa: fontes subestimadas e o que fazer",
+    "published_at": "2026-10-28"
   }
 ]

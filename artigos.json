@@ -1,5 +1,27 @@
 [
   {
+    "slug": "ruido-em-casa",
+    "titulo": "Ruído em casa: fontes subestimadas e o que fazer",
+    "categoria": "prevencao",
+    "resumo": "Aspiradores, berbequins, corta-relvas: o ruído doméstico também conta para a audição. Saiba identificar as fontes mais intensas e como reduzir a exposição no dia-a-dia.",
+    "data": "2026-10-28",
+    "tempo_leitura": "5 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/ruido-em-casa.jpg",
+    "social": {
+      "facebook": "Usa o berbequim, o corta-relvas ou o secador sem pensar nos ouvidos? É natural: o ruído de casa raramente parece perigoso.\n\nMas o ouvido reage à intensidade e ao tempo de exposição, venha o som de onde vier. Algumas tarefas domésticas, sobretudo bricolage e jardinagem, aproximam-se de níveis que podem causar dano quando se prolongam.\n\nNo novo artigo explicamos quais são as fontes de ruído mais subestimadas em casa e as medidas simples que ajudam a proteger a audição.",
+      "instagram": "Berbequins, corta-relvas, volumes altos: o ruído doméstico também conta para a audição. Pequenas medidas, como protecção auditiva e pausas, fazem diferença.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#prevencao",
+        "#ruido",
+        "#audicao",
+        "#protecaoauditiva",
+        "#saude50mais"
+      ]
+    }
+  },
+  {
     "slug": "pedir-para-repetir-sinal-alerta",
     "titulo": "Pedir para repetir: quando é sinal de alerta",
     "categoria": "sinais-alerta",
