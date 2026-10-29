@@ -1,5 +1,27 @@
 [
   {
+    "slug": "acompanhar-consulta-audicao",
+    "titulo": "Ir à consulta de audição acompanhado: porque ajuda",
+    "categoria": "familia",
+    "resumo": "A presença de um familiar na consulta de audição ajuda a descrever o dia-a-dia, a reter informação e a manter o acompanhamento. Saiba como ser um bom acompanhante.",
+    "data": "2026-10-29",
+    "tempo_leitura": "5 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/acompanhar-consulta-audicao.jpg",
+    "social": {
+      "facebook": "Já reparou que o seu pai, a sua mãe ou o seu companheiro descrevem a audição como melhor do que ela realmente é? É comum: a perda auditiva instala-se devagar e o próprio nem sempre se apercebe.\n\nIr à consulta acompanhado ajuda o profissional a conhecer as dificuldades do dia-a-dia, facilita a retenção das explicações e dá mais apoio na fase de adaptação.\n\nNo novo artigo explicamos porque é que a presença de um familiar ajuda e como acompanhar sem tomar o lugar de quem é avaliado.",
+      "instagram": "Ir à consulta de audição acompanhado ajuda a descrever o dia-a-dia, a lembrar as explicações e a manter o acompanhamento. O protagonista continua a ser quem é avaliado.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#familia",
+        "#audicao",
+        "#consultaauditiva",
+        "#perdaauditiva",
+        "#saude50mais"
+      ]
+    }
+  },
+  {
     "slug": "ruido-em-casa",
     "titulo": "Ruído em casa: fontes subestimadas e o que fazer",
     "categoria": "prevencao",
