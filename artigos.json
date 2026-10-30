@@ -1,5 +1,27 @@
 [
   {
+    "slug": "perda-auditiva-unilateral",
+    "titulo": "Perda auditiva unilateral: ouvir de um só lado",
+    "categoria": "perda-auditiva",
+    "resumo": "Ouvir pior de um ouvido do que do outro não é apenas um incómodo. Conheça as causas possíveis, o impacto no dia-a-dia e porque deve ser sempre avaliado.",
+    "data": "2026-10-30",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/perda-auditiva-unilateral.jpg",
+    "social": {
+      "facebook": "Já reparou que ao telemóvel ouve melhor de um ouvido do que do outro? Ou que à mesa só acompanha bem quem está sentado de um lado?\n\nOuvir pior de um só lado dificulta localizar sons e compreender conversas em ambientes ruidosos. As causas são diversas e algumas exigem avaliação rápida, sobretudo quando a perda surge de repente.\n\nNo novo artigo explicamos o que significa a perda auditiva unilateral, as causas possíveis, os sinais de urgência e as soluções que existem.",
+      "instagram": "Ouvir pior de um só ouvido não é apenas um incómodo: afecta a localização dos sons e a compreensão no ruído. E uma diferença entre os dois ouvidos merece sempre avaliação.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#perdaauditiva",
+        "#audicao",
+        "#perdaauditivaunilateral",
+        "#saude50mais",
+        "#ouvidos"
+      ]
+    }
+  },
+  {
     "slug": "acompanhar-consulta-audicao",
     "titulo": "Ir à consulta de audição acompanhado: porque ajuda",
     "categoria": "familia",
