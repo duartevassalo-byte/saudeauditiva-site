@@ -238,5 +238,11 @@
     "slug": "perda-auditiva-unilateral",
     "titulo": "Perda auditiva unilateral: ouvir de um só lado",
     "published_at": "2026-10-30"
+  },
+  {
+    "topic_id": "ap-006",
+    "slug": "pilhas-ou-recarregaveis-aparelhos-auditivos",
+    "titulo": "Aparelhos auditivos: pilhas ou recarregáveis?",
+    "published_at": "2026-10-31"
   }
 ]
