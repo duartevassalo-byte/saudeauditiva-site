@@ -1,5 +1,27 @@
 [
   {
+    "slug": "exercicio-fisico-audicao",
+    "titulo": "Exercício físico e audição: o que se sabe",
+    "categoria": "prevencao",
+    "resumo": "A actividade física pode favorecer as condições de que o ouvido interno depende. O que dizem os estudos, os seus limites e como fazer exercício sem ruído a mais.",
+    "data": "2026-11-02",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/exercicio-fisico-audicao.jpg",
+    "social": {
+      "facebook": "Faz a sua caminhada diária, mas nunca pensou que também pudesse ter a ver com os ouvidos? A cóclea, no ouvido interno, depende de um fornecimento regular de sangue e oxigénio.\n\nEstudos associam a actividade física a um menor risco de perda auditiva, embora a relação ainda não esteja demonstrada. E há outros benefícios, sobretudo no equilíbrio e no contacto social.\n\nNo artigo explicamos o que a investigação diz e o que ainda não diz, e como fazer exercício sem expor os ouvidos a ruído desnecessário.",
+      "instagram": "Uma caminhada também pode fazer bem aos ouvidos? A investigação sugere uma ligação, ainda por demonstrar, e há outros benefícios para quem ouve menos bem.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#audicao",
+        "#prevencao",
+        "#exerciciofisico",
+        "#envelhecimentoativo",
+        "#perdaauditiva"
+      ]
+    }
+  },
+  {
     "slug": "os-outros-falam-baixo",
     "titulo": "«Os outros falam baixo»: um sinal a não ignorar",
     "categoria": "sinais-alerta",
