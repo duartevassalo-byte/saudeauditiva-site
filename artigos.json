@@ -1,5 +1,27 @@
 [
   {
+    "slug": "perda-auditiva-oculta",
+    "titulo": "Perda auditiva oculta: quando o audiograma é normal",
+    "categoria": "sinais-alerta",
+    "resumo": "O exame diz que a audição está normal, mas perceber conversas com ruído continua difícil. O que se sabe sobre a chamada perda auditiva oculta.",
+    "data": "2026-11-10",
+    "tempo_leitura": "6 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/perda-auditiva-oculta.jpg",
+    "social": {
+      "facebook": "Faz o exame à audição, o resultado diz que está tudo normal… mas continua a perder metade da conversa quando há barulho à volta?\n\nO audiograma mede sobretudo a capacidade de detectar sons em silêncio, não a de compreender fala com ruído. A investigação mostra que podem existir alterações no ouvido interno que escapam a este exame de rotina.\n\nNo artigo explicamos o que é a chamada perda auditiva oculta, que sinais merecem atenção e o que pode ser feito.",
+      "instagram": "O audiograma deu normal, mas perceber uma conversa num restaurante continua difícil? Pode tratar-se da chamada perda auditiva oculta. Explicamos o que se sabe.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#perdaauditiva",
+        "#audicao",
+        "#audiograma",
+        "#ruido",
+        "#envelhecimentoativo"
+      ]
+    }
+  },
+  {
     "slug": "auscultadores-cancelamento-ruido",
     "titulo": "Auscultadores com cancelamento de ruído: uma ajuda para a audição?",
     "categoria": "prevencao",
