@@ -125,7 +125,7 @@
           <div class="form-consent">
             <label class="consent-row">
               <input type="checkbox" name="consentimento" value="sim" required>
-              <span>Autorizo a partilha dos meus dados com um centro auditivo parceiro, para marcar a consulta, e com parceiros de energia (ex.: Repsol), para receber propostas. <a href="${root}privacidade.html">Saber mais</a>.</span>
+              <span>Autorizo o tratamento dos meus dados nos termos da <a href="${root}privacidade.html">Política de Privacidade</a>.</span>
             </label>
           </div>
           <button type="submit" class="btn btn-primary btn-block btn-lg">Confirmar pedido de consulta →</button>
