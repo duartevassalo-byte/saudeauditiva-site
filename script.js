@@ -69,6 +69,14 @@ function enviarLeadParaSheet(formData) {
         formData.append('_subject', 'Nova consulta — saudeauditiva.pt');
         formData.append('origem', 'saudeauditiva.pt — ' + (form.id || 'modal'));
         formData.append('pagina', window.location.pathname);
+        // Prova de consentimento
+        formData.set('consentimento_energia', form.querySelector('[name="consentimento_energia"]')?.checked ? 'sim' : 'nao');
+        formData.append('consent_versao', '2026-11-19');
+        formData.append('consent_data', new Date().toISOString());
+        formData.append('consent_texto', Array.from(form.querySelectorAll('.consent-row')).map(l => {
+          const c = l.querySelector('input[type=checkbox]');
+          return '[' + (c && c.checked ? 'x' : ' ') + '] ' + l.innerText.trim();
+        }).join(' | '));
         enviarLeadParaSheet(formData);
 
         const res = await fetch(FORMSPREE_ENDPOINT, {
