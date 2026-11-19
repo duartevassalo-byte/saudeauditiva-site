@@ -70,7 +70,7 @@ function enviarLeadParaSheet(formData) {
         formData.append('origem', 'saudeauditiva.pt — ' + (form.id || 'modal'));
         formData.append('pagina', window.location.pathname);
         // Prova de consentimento
-        formData.set('consentimento_energia', form.querySelector('[name="consentimento_energia"]')?.checked ? 'sim' : 'nao');
+        formData.set('consentimento_energia', form.querySelector('[name="consentimento"]')?.checked ? 'sim' : 'nao');
         formData.append('consent_versao', '2026-11-19');
         formData.append('consent_data', new Date().toISOString());
         formData.append('consent_texto', Array.from(form.querySelectorAll('.consent-row')).map(l => {
