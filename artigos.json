@@ -1,5 +1,27 @@
 [
   {
+    "slug": "proteger-ouvidos-concertos",
+    "titulo": "Concertos e festas: proteger os ouvidos sem perder a música",
+    "categoria": "prevencao",
+    "resumo": "Concertos, casamentos e arraiais podem expor os ouvidos a níveis de som elevados. Como aproveitar a música e reduzir o risco, em qualquer idade.",
+    "data": "2026-11-20",
+    "tempo_leitura": "5 min",
+    "autor": "Redacção Saúde Auditiva",
+    "imagem": "https://saudeauditiva.pt/img/artigos/proteger-ouvidos-concertos.jpg",
+    "social": {
+      "facebook": "Já saiu de um concerto, de um casamento ou de um arraial com os ouvidos abafados ou a zumbir?\n\nEsse desconforto costuma passar em poucas horas, mas é sinal de que o ouvido foi sobrecarregado. A perda auditiva provocada por ruído é, em geral, permanente — e em grande medida evitável.\n\nNo novo artigo explicamos como escolher o lugar, quando fazer pausas, que tipos de tampões existem e que cuidados ter com os netos e com quem usa aparelhos auditivos.",
+      "instagram": "Concertos, casamentos e arraiais podem ser muito ruidosos. Saiba como aproveitar a música e proteger os ouvidos, os seus e os de quem vai consigo.",
+      "hashtags": [
+        "#saudeauditiva",
+        "#prevencao",
+        "#protecaoauditiva",
+        "#concertos",
+        "#zumbido",
+        "#audicao"
+      ]
+    }
+  },
+  {
     "slug": "experimentar-aparelhos-auditivos",
     "titulo": "Experimentar aparelhos auditivos antes de comprar",
     "categoria": "aparelhos",
