@@ -76,6 +76,7 @@
     { "id": "ap-012", "titulo_base": "Teste domiciliário: aparelhos à experiência antes da compra", "categoria": "aparelhos", "angulo": "direito a período de adaptação", "palavras_chave": ["aparelho auditivo experiência"], "publico": "candidatos", "tom": "informativo" },
     { "id": "ap-013", "titulo_base": "Aparelhos auditivos online versus centro auditivo", "categoria": "aparelhos", "angulo": "riscos da compra sem avaliação", "palavras_chave": ["comprar aparelho online"], "publico": "geral", "tom": "pedagógico" },
     { "id": "ap-014", "titulo_base": "Garantia e pós-venda de aparelhos auditivos: o que exigir", "categoria": "aparelhos", "angulo": "perguntas a fazer antes de comprar", "palavras_chave": ["garantia aparelho auditivo"], "publico": "candidatos", "tom": "informativo" },
-    { "id": "ap-015", "titulo_base": "Dois aparelhos versus um: a binauralidade importa", "categoria": "aparelhos", "angulo": "audição espacial e compreensão no ruído", "palavras_chave": ["dois aparelhos auditivos"], "publico": "geral", "tom": "pedagógico" }
+    { "id": "ap-015", "titulo_base": "Dois aparelhos versus um: a binauralidade importa", "categoria": "aparelhos", "angulo": "audição espacial e compreensão no ruído", "palavras_chave": ["dois aparelhos auditivos"], "publico": "geral", "tom": "pedagógico" },
+    { "id": "pr-013", "titulo_base": "Tensão arterial, coração e audição: que ligação?", "categoria": "prevencao", "angulo": "factores de risco cardiovascular, zumbido pulsátil e incluir a audição nas consultas de rotina", "palavras_chave": ["tensão arterial audição", "hipertensão perda auditiva", "zumbido pulsátil"], "publico": "geral", "tom": "informativo" }
   ]
 }
